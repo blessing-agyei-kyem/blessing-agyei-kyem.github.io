@@ -22,6 +22,35 @@
   <link rel="canonical" href="http://localhost:4000/">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+  <style>
+    .news-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .news-item {
+      margin: 0 0 0.75em 0;
+    }
+
+    .news-list:not(.expanded) .news-item:nth-child(n+9) {
+      display: none;
+    }
+
+    .news-toggle {
+      background: none;
+      border: 0;
+      color: #9900FF;
+      cursor: pointer;
+      font-size: 1em;
+      padding: 0;
+    }
+
+    .news-toggle:focus {
+      outline: 1px dotted #9900FF;
+      outline-offset: 2px;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -34,7 +63,7 @@
               <h1>
                 Blessing Agyei Kyem
               </h1>
-              <p>I am a first year PhD student at the <a href="https://ndsu-smartlab.com/">Sustainable Mobility and Advanced Research in Transportation</a> (<a href="https://computervision0.github.io/">SMART</a>) Lab at <a href="https://www.ndsu.edu/">North Dakota State University</a>, where I work on Multi-modal AI in Computer Vision and its applications in Transportation and Pavement Engineering. My PhD advisor is <a href="https://aboah1994.github.io/">Armstrong Aboah</a>.
+              <p>I am a second year PhD student at the <a href="https://ndsu-smartlab.com/">Sustainable Mobility and Advanced Research in Transportation</a> (<a href="https://computervision0.github.io/">SMART</a>) Lab at <a href="https://www.ndsu.edu/">North Dakota State University</a>, where I work on Multi-modal AI in Computer Vision and its applications in Transportation and Pavement Engineering. My PhD advisor is <a href="https://aboah1994.github.io/">Armstrong Aboah</a>.
               </p>
               <p>
                 From 2019 to 2022, I worked at <a href="https://bismuthinc.com/">Bismuth Technologies</a> as a Data Scientist where I led their Data Team. I contributed to making data-driven decisions by developing predictive models, optimizing data pipelines, and providing actionable insights that significantly improved product performance and customer satisfaction . 
@@ -63,30 +92,51 @@
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>News</h2>
-              <p>
-                <font color="#9900FF">[07/12/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; <strong>Three</strong> of our research papers have been <strong>accepted at ICCV 2025</strong>!
-              <p>
-              <p>
-                <font color="#9900FF">[04/29/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our research paper: <strong>Saam-Reflectnet: Sign-Aware Attention-Based Multitasking Framework for Integrated Traffic Sign Detection and Retroreflectivity Estimation</strong> has been accepted for publication at <strong>Expert Systems with Applications</strong>
-              <p>
-              <p>
-                <font color="#9900FF">[04/29/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our research paper: <strong>A Context-Aware Framework for Precise Segmentation of Tiny Cracks in Pavement Images</strong> has been accepted for publication at <strong>Construction and Building Materials</strong>
-              <p>
-              <p>
-                <font color="#9900FF">[02/26/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>A Big Data Approach to Pavement Distress Detection</strong> has been accepted for oral presentation at the <strong>International Conference on Big Data Analytics 2025</strong>
-              <p>
-              <p>
-                <font color="#9900FF">[02/26/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>Integrating Travel Behavior Forecasting and Generative Modeling for Predicting Future Urban Mobility and Spatial Transformations</strong> has been accepted for oral presentation at the <strong>International Conference on Big Data Analytics 2025</strong>
-              <p>
-                <font color="#9900FF">[12/19/2024]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper titled <strong>Weather-Adaptive Synthetic Data Generation for Enhanced Power Line Inspection Using StarGAN</strong> has been accepted for publication at <strong>IEEE Access</strong>
-              </p>
-
-              <p>
-                <font color="#9900FF">[09/25/2024]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our research paper titled <strong>A novel methodological framework for assessing traffic sign retroreflectivity using Lidar data</strong> has been accepted for presentation at the <strong>TRB 2025</strong> Conference 
-              </p>
-              <p>
-                <font color="#9900FF">[09/22/2024]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>PaveCap: The First Multimodal Framework for Comprehensive Pavement Condition Assessment with Dense Captioning and PCI Estimation</strong> has been accepted for presentation at the <strong>TRB 2025</strong> Annual Conference Meeting
-              </p>
+              <div id="news-list" class="news-list">
+                <p class="news-item">
+                  <font color="#9900FF">[10/03/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>Self-Supervised Multi-Scale Transformer with Attention-Guided Fusion For Efficient Crack Detection</strong> has been accepted for publication at <strong>Automation in Construction</strong>
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[09/30/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; <strong>Demographics-Informed Neural Network for Multi-Modal Spatiotemporal Forecasting of Urban Growth and Travel Patterns Using Satellite Imagery</strong> has been accepted for presentation at <strong>TRB 2026</strong>
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[09/29/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>Demographics-Informed Neural Network for Multi-Modal Spatiotemporal Forecasting of Urban Growth and Travel Patterns Using Satellite Imagery</strong> has been accepted at <strong>NeurIPS 2025</strong>!
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[09/28/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>Self-Supervised Multi-Scale Transformer with Attention-Guided Fusion For Efficient Crack Detection</strong> has been accepted for presentation at the <strong>TRB 2026</strong> Conference
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[09/28/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; <strong>Context-CrackNet: A Context-Aware Framework for Precise Segmentation of Tiny Cracks in Pavement Images</strong> has been accepted for presentation at the <strong>TRB 2026</strong> Conference
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[09/20/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>An Enhanced Lightweight Model for Real-time Pavement Condition Index Prediction</strong> has been accepted for presentation at the <strong>TRB 2026</strong> Conference
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[07/12/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; <strong>Three</strong> of our research papers have been <strong>accepted at ICCV 2025</strong>!
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[04/29/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our research paper: <strong>Saam-Reflectnet: Sign-Aware Attention-Based Multitasking Framework for Integrated Traffic Sign Detection and Retroreflectivity Estimation</strong> has been accepted for publication at <strong>Expert Systems with Applications</strong>
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[04/29/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our research paper: <strong>Context-CrackNet: A Context-Aware Framework for Precise Segmentation of Tiny Cracks in Pavement Images</strong> has been accepted for publication at <strong>Construction and Building Materials</strong>
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[02/26/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>A Big Data Approach to Pavement Distress Detection</strong> has been accepted for oral presentation at the <strong>International Conference on Big Data Analytics 2025</strong>
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[02/26/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>Integrating Travel Behavior Forecasting and Generative Modeling for Predicting Future Urban Mobility and Spatial Transformations</strong> has been accepted for oral presentation at the <strong>International Conference on Big Data Analytics 2025</strong>
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[12/19/2024]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper titled <strong>Weather-Adaptive Synthetic Data Generation for Enhanced Power Line Inspection Using StarGAN</strong> has been accepted for publication at <strong>IEEE Access</strong>
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[09/25/2024]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our research paper titled <strong>A novel methodological framework for assessing traffic sign retroreflectivity using Lidar data</strong> has been accepted for presentation at the <strong>TRB 2025</strong> Conference 
+                </p>
+                <p class="news-item">
+                  <font color="#9900FF">[09/22/2024]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>PaveCap: The First Multimodal Framework for Comprehensive Pavement Condition Assessment with Dense Captioning and PCI Estimation</strong> has been accepted for presentation at the <strong>TRB 2025</strong> Annual Conference Meeting
+                </p>
+              </div>
+              <button type="button" id="news-toggle" class="news-toggle">Read more...</button>
 
             </td>
           </tr>
@@ -364,6 +414,31 @@
       </td>
     </tr>
   </table>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var newsList = document.getElementById('news-list');
+      var toggleButton = document.getElementById('news-toggle');
+      var visibleCount = 8;
+
+      if (!newsList || !toggleButton) {
+        return;
+      }
+
+      var items = newsList.querySelectorAll('.news-item');
+
+      if (items.length <= visibleCount) {
+        toggleButton.style.display = 'none';
+        return;
+      }
+
+      toggleButton.addEventListener('click', function () {
+        var expanded = newsList.classList.toggle('expanded');
+        toggleButton.textContent = expanded ? 'Show less' : 'Read more';
+      });
+    });
+
+  </script>
 </body>
 
 </html>
