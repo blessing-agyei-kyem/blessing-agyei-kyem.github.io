@@ -32,7 +32,7 @@
       margin: 0 0 0.75em 0;
     }
 
-    .news-list:not(.expanded) .news-item:nth-child(n+9) {
+    .news-list:not(.expanded) .news-item:nth-child(n+11) {
       display: none;
     }
 
@@ -93,6 +93,9 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>News</h2>
               <div id="news-list" class="news-list">
+                <p class="news-item">
+                  <font color="#9900FF">[10/05/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper titled <strong>A Memory-Augmented Transformer with Multi-Scale Spatio-Temporal Modelling for Network-Wide Traffic Flow Prediction</strong> has been accepted for presentation at <strong>TRB 2026</strong>
+                </p>
                 <p class="news-item">
                   <font color="#9900FF">[10/03/2025]</font> &nbsp; &nbsp; &nbsp; &nbsp; Our paper <strong>Self-Supervised Multi-Scale Transformer with Attention-Guided Fusion For Efficient Crack Detection</strong> has been accepted for publication at <strong>Automation in Construction</strong>
                 </p>
@@ -419,7 +422,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       var newsList = document.getElementById('news-list');
       var toggleButton = document.getElementById('news-toggle');
-      var visibleCount = 8;
+      var visibleCount = 10;
 
       if (!newsList || !toggleButton) {
         return;
