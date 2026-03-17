@@ -55,11 +55,68 @@
       padding: 1px 5px;
       border-radius: 3px;
     }
+
+    /* Dark mode */
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode table,
+    body.dark-mode td {
+      background-color: #1a1a1a;
+    }
+
+
+    body.dark-mode a {
+      color: #bb86fc;
+    }
+
+    body.dark-mode td[style*="width:75%"] em {
+      background-color: #5a4a00;
+      color: #FFD54F;
+    }
+
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3 {
+      color: #f0f0f0;
+    }
+
+    /* Theme toggle button */
+    #theme-toggle {
+      position: fixed;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: 2px solid #000;
+      cursor: pointer;
+      font-size: 1.4em;
+      z-index: 1000;
+      line-height: 1;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+
+    #theme-toggle:hover {
+      background: rgba(128,128,128,0.1);
+    }
+
+    body.dark-mode #theme-toggle {
+      border-color: #e0e0e0;
+    }
   </style>
 
 </head>
 
 <body>
+  <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -86,7 +143,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="https://blessing-agyei-kyem.github.io/"><img style="width:80%;max-width:100%" alt="profile photo" src="images/canva profile-pic-v2.png"></a>
+              <a href="https://blessing-agyei-kyem.github.io/"><img style="width:80%;max-width:100%;border-radius:50%;aspect-ratio:1/1;object-fit:cover;object-position:center top;" alt="profile photo" src="images/profile-pic.JPG"></a>
             </td>
           </tr>
         </table>
@@ -707,6 +764,21 @@
         var expanded = newsList.classList.toggle('expanded');
         toggleButton.textContent = expanded ? 'Show less' : 'Read more';
       });
+    });
+
+    // Dark mode toggle
+    var themeBtn = document.getElementById('theme-toggle');
+    var savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      themeBtn.textContent = '☀️';
+    }
+
+    themeBtn.addEventListener('click', function () {
+      var isDark = document.body.classList.toggle('dark-mode');
+      themeBtn.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
 
   </script>
